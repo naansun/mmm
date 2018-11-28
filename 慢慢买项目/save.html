@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>慢慢买首页</title>
+    <title>优惠页</title>
     <!-- 引入样式 -->
     <link rel="stylesheet" href="./css/container.css">
     <link rel="stylesheet" href="./lib/fa字体图标库/css/font-awesome.css">
@@ -15,13 +15,12 @@
     <!-- 大容器 -->
     <div class="m_container">
         <!-- 头部区域 -->
-        <div class="m_header">
+        <div class="com">
             <!-- 首页导航区域 -->
-            <div class="m_logo">
-                <a href="#">
-                    <img src="./images/header_logo.png" alt="">
-                </a>
+            <div class="back">
+                <a href="index.html" class="fa fa-angle-left"></a>
             </div>
+            <h1>省钱控 - 最新优惠</h1>
             <!-- 下载logo -->
             <div class="down">
                 <a href="#">
@@ -29,40 +28,11 @@
                 </a>
             </div>
         </div>
-        <!-- 搜索区域 -->
-        <div class="m_search">
-            <input type="search" placeholder="请输入你想比价的商品">
-            <input type="button" value="搜索">
-        </div>
-        <!-- 导航区域 -->
-        <div class="m_nav">
-            <ul class="clearfix">
-                <!-- 挖个坑 -->
-
-            </ul>
-        </div>
         <!-- 产品区域 -->
         <div class="m_product">
-            <!-- 标题区域 -->
-            <div class="m_title">
-                <span>超值折扣推荐</span>
-                <img src="./images/more.png" alt="">
-            </div>
             <!-- 产品区域 -->
             <div class="m_info">
-                <ul>
-                    <!-- 第二个坑 -->
-                </ul>
-                <div class="more">
-                    <a href="save.html">更多优惠信息 »</a>
-                </div>
-            </div>
-        </div>
-        <!-- 品牌排行区域 -->
-        <div class="m_line">
-            <div class="m_title">
-                <span>超值折扣推荐</span>
-                <img src="./images/more.png" alt="">
+                <!-- 挖个坑 -->
             </div>
         </div>
         <!-- 底部区域 -->
@@ -70,7 +40,7 @@
             <div class="top">
                 <a href="">登录</a>
                 <a href="" class="login">注册</a>
-                <a href="javascript:;" style="width: 40%; border: 0;" id="return">
+                <a href="" style="width: 40%; border: 0;" id="return">
                     <img src="./images/top.jpg" alt="">
                     <span>返回顶部</span>
                 </a>
@@ -85,20 +55,13 @@
 
         </div>
     </div>
-    <!-- 第一个模板引擎模板 -->
-    <script type="text/html" id="nav">
-        {{each result v i}}
-        <li class="{{ i>=8?'hide':''}}">
-            <a href="{{v.titlehref}}" id="{{i===7?'moreBtn':''}}">
-                {{#v.img}}
-                <p>{{v.name}}</p>
-            </a>
-        </li>
-       {{/each}}
+    <!-- 模板引擎 -->
+    <script type="text/html" id="select">
+        <option value="" selected="selected">1/14</option>
     </script>
-
     <!-- 第二个模板引擎 -->
     <script type="text/html" id="product">
+        <ul>
         {{each result v i}}
         <li>
             <a href="#">
@@ -124,14 +87,32 @@
             </a>
         </li>
         {{/each}}
+        </ul>
+            <div class="page clearfix">
+                <span><a href="javascript:;" id="pre">上一页</a></span>
+                <span>
+                    <select name="" id="selectPage" style="border: 1px solid #bababa; font-size: 16px; padding: 8px 15px; height: 36px">
+                        <!-- 挖个坑 -->
+                        <%
+                        var num = totalCount/pagesize;
+                        for(var i = 1;i<=num;i++){
+                        %>
+                        <option value=<%= i-1%>>{{i}}/14</option>
+                        <%
+                         }
+                        %>
+                    </select>
+                </span>
+                <span><a href="javascript:;" id="next">下一页</a></span>
+            </div>
     </script>
     <!-- 引入rem布局插件 -->
     <script src="./lib/jquery/jquery.js"></script>
     <script src="./lib/flexible/flexible.js"></script>
     <!-- 模板引擎插件 -->
     <script src="./lib/template/template-web.js"></script>
-    <script src="./js/index.js"></script>
-    <!-- 返回顶部js -->
+    <script src="./js/save.js"></script>
+    <!-- 引入返回顶部js -->
     <script src="./js/return.js"></script>
 </body>
 

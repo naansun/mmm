@@ -1,81 +1,204 @@
-//引入外部文件
-// 重置样式
-@import "base";
-// 初始化样式
-@import "normalize";
-// 引入公共部分
-@import "common.less";
-@desgin: 750;
-@base: @desgin / 10;
-@mmmColor: #ff841d;
-/*大容器*/
-
 .m_container {
+  width: 100%; //   height: 2000px;
+  background-color: #f1f1f1; // 头部区域
+  .m_header {
     width: 100%;
-    height: 2000px;
+    height: 50rem / @base;
+    line-height: 50rem / @base;
     background-color: @mmmColor;
-    /*搜索区域*/
-    .m_search {
-        height: 50rem / @base;
-        padding: 10rem / @base;
-        background-color: #fff;
-        position: relative;
-        [type="search"] {
-            height: 30rem / @base;
-            width: 78%;
-            position: absolute;
-            left: 10rem / @base;
-            top: 10rem / @base;
-            padding-left: 20rem / @base;
-            padding-right: 50rem / @base;
-            background-color: #f1f1f1;
-            border-radius: 15rem / @base;
-            font-size: 13rem / @base;
+    position: relative;
+    .m_logo {
+      height: 100%;
+      width: 75%;
+      padding: 12rem / @base;
+      margin-left: 5rem / @base;
+      float: left;
+      a {
+        display: block;
+        i {
+          color: #fff;
         }
-        [type="button"] {
-            width: 63rem / @base;
-            height: 30rem / @base;
-            line-height: 30rem / @base;
-            position: absolute;
-            right: 10rem / @base;
-            top: 10rem / @base;
-            font-size: 16rem / @base;
-            background-color: @mmmColor;
-            border: none;
-            border-radius: 15rem / @base;
-            color: #fff;
+        img {
+          width: 185rem / @base;
+          height: 25rem / @base;
         }
+      }
     }
-    .m_nav {
-        background-color: #f1f1f1;
-        padding-top: 10rem / @base;
-        padding-bottom: 5rem / @base;
-        text-align: center;
-        ul {
-            background-color: #fff;
-            padding: 10rem / @base 0;
-            .item {
-                float: left;
-                width: 25%;
-                margin-top: 15rem / @base;
-                display: block;
-                &.hide {
-                    display: none;
-                }
-                a {
-                    display: block;
-                    height: 71rem / @base;
-                    img {
-                        width: 50rem / @base;
-                        height: 50rem / @base;
-                        margin: 0 auto;
-                    }
-                    p {
-                        font-size: 12rem / @base;
-                        margin-top: 5rem / @base;
-                    }
-                }
+    .down {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 7rem / @base;
+      width: 48rem / @base;
+      height: 48rem / @base;
+    }
+  }
+  /*搜索区域*/
+  .m_search {
+    height: 50rem / @base;
+    padding: 10rem / @base;
+    background-color: #fff;
+    position: relative;
+    [type="search"] {
+      height: 30rem / @base;
+      width: 78%;
+      position: absolute;
+      left: 10rem / @base;
+      top: 10rem / @base;
+      padding-left: 20rem / @base;
+      padding-right: 50rem / @base;
+      background-color: #f1f1f1;
+      border-radius: 15rem / @base;
+      font-size: 13rem / @base;
+    }
+    [type="button"] {
+      width: 63rem / @base;
+      height: 30rem / @base;
+      line-height: 30rem / @base;
+      position: absolute;
+      right: 10rem / @base;
+      top: 10rem / @base;
+      font-size: 16rem / @base;
+      background-color: @mmmColor;
+      border: none;
+      border-radius: 15rem / @base;
+      color: #fff;
+    }
+  }
+  .m_nav {
+    background-color: #f1f1f1;
+    padding-top: 10rem / @base;
+    padding-bottom: 5rem / @base;
+    text-align: center;
+    ul {
+      background-color: #fff;
+      padding: 10rem / @base 0;
+      li {
+        float: left;
+        width: 25%;
+        margin-top: 15rem / @base;
+        display: block;
+        &.hide {
+          display: none;
+        }
+        a {
+          display: block;
+          height: 71rem / @base;
+          img {
+            width: 50rem / @base;
+            height: 50rem / @base;
+            margin: 0 auto;
+          }
+          p {
+            font-size: 12rem / @base;
+            margin-top: 5rem / @base;
+          }
+        }
+      }
+    }
+  }
+  /*产品区域*/
+  .m_product {
+    .m_info {
+      background-color: #fff;
+      position: relative;
+      li {
+        border-bottom: 1px solid #ccc;
+        padding: 14rem / @base 8rem / @base;
+        a {
+          display: block;
+          position: relative;
+          .pic {
+            width: 110rem / @base;
+            height: 100rem / @base;
+            img {
+              width: 100%;
+              height: 100%;
+              font-size: 12rem / @base;
             }
+          }
+          .right {
+            width: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding-left: 110rem / @base;
+            p {
+              height: 57rem / @base;
+              font-size: 15rem / @base;
+              padding-top: 10rem / @base;
+              padding-right: 8rem / @base;
+              color: #333;
+              span {
+                color: @mmmColor;
+              }
+            }
+            .mall {
+              span {
+                font-size: 12rem / @base;
+                color: #a1a1a1;
+              }
+              .spc {
+                float: right;
+                i {
+                  padding-right: 5rem / @base;
+                }
+              }
+            }
+          }
         }
+      }
+      .more {
+        width: 100%;
+        text-align: center;
+        a {
+          line-height: 30rem / @base;
+          border: 1px solid #ddd;
+          display: block;
+          margin: 10rem / @base;
+          font-size: 13rem / @base;
+          border-radius: 4rem / @base;
+          background-color: #fafafa;
+        }
+      }
     }
+  } // 底部区域
+  .m_footer {
+    height: 96rem / @base;
+    background-color: #efefef;
+    .top {
+      margin-top: 25rem / @base;
+      border-bottom: 1px solid #c4c4c4;
+      border-top: 1px solid #c4c4c4;
+      text-align: center;
+      height: 32rem / @base;
+      line-height: 32rem / @base;
+      a {
+        display: block;
+        float: left;
+        width: 30%;
+        height: 100%;
+        font-size: 14rem / @base;
+        img {
+          display: inline;
+          width: 15rem / @base;
+          height: 15rem / @base;
+          vertical-align: middle;
+          margin-top: -5rem / @base;
+        }
+        &.login {
+          border-left: 1px solid #c4c4c4;
+          border-right: 1px solid #c4c4c4;
+        }
+      }
+    }
+    .bottom {
+      text-align: center;
+      padding: 15rem / @base 0;
+      p {
+        font-size: 12rem / @base;
+        color: #666;
+      }
+    }
+  }
 }
