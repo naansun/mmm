@@ -1,0 +1,81 @@
+//引入外部文件
+// 重置样式
+@import "base";
+// 初始化样式
+@import "normalize";
+// 引入公共部分
+@import "common.less";
+@desgin: 750;
+@base: @desgin / 10;
+@mmmColor: #ff841d;
+/*大容器*/
+
+.m_container {
+    width: 100%;
+    height: 2000px;
+    background-color: @mmmColor;
+    /*搜索区域*/
+    .m_search {
+        height: 50rem / @base;
+        padding: 10rem / @base;
+        background-color: #fff;
+        position: relative;
+        [type="search"] {
+            height: 30rem / @base;
+            width: 78%;
+            position: absolute;
+            left: 10rem / @base;
+            top: 10rem / @base;
+            padding-left: 20rem / @base;
+            padding-right: 50rem / @base;
+            background-color: #f1f1f1;
+            border-radius: 15rem / @base;
+            font-size: 13rem / @base;
+        }
+        [type="button"] {
+            width: 63rem / @base;
+            height: 30rem / @base;
+            line-height: 30rem / @base;
+            position: absolute;
+            right: 10rem / @base;
+            top: 10rem / @base;
+            font-size: 16rem / @base;
+            background-color: @mmmColor;
+            border: none;
+            border-radius: 15rem / @base;
+            color: #fff;
+        }
+    }
+    .m_nav {
+        background-color: #f1f1f1;
+        padding-top: 10rem / @base;
+        padding-bottom: 5rem / @base;
+        text-align: center;
+        ul {
+            background-color: #fff;
+            padding: 10rem / @base 0;
+            .item {
+                float: left;
+                width: 25%;
+                margin-top: 15rem / @base;
+                display: block;
+                &.hide {
+                    display: none;
+                }
+                a {
+                    display: block;
+                    height: 71rem / @base;
+                    img {
+                        width: 50rem / @base;
+                        height: 50rem / @base;
+                        margin: 0 auto;
+                    }
+                    p {
+                        font-size: 12rem / @base;
+                        margin-top: 5rem / @base;
+                    }
+                }
+            }
+        }
+    }
+}
