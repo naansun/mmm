@@ -1,0 +1,46 @@
+.row {
+  ul {
+    border-radius: 5rem / @base;
+    border: 1px solid #ccc;
+  }
+  li {
+    background-color: #fff;
+    a {
+      display: block;
+      height: 40rem / @base;
+      line-height: 40rem / @base;
+      color: #000;
+      font-size: 16rem / @base;
+      font-weight: bold;
+      padding-left: 15rem / @base;
+      padding-right: 15rem / @base;
+      background-color: #ededed;
+      border-bottom: 1px solid #ccc;
+      i {
+        float: right;
+        color: #919191;
+        line-height: 40rem / @base;
+        font-size: 20rem / @base;
+      }
+    }
+    .item {
+      display: none;
+      border: none;
+      li {
+        width: 33.33%;
+        float: left;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        a {
+          display: block;
+          height: 40rem / @base;
+          background-color: #fff;
+          font-weight: normal;
+          color: #333;
+          border: none;
+        }
+      }
+    }
+  }
+}

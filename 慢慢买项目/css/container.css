@@ -506,3 +506,82 @@ th {
   box-shadow: 0 0 1px #666;
   border-bottom: 1px solid #bababa;
 }
+.row ul {
+  border-radius: 0.06666667rem;
+  border: 1px solid #ccc;
+}
+.row li {
+  background-color: #fff;
+}
+.row li a {
+  display: block;
+  height: 0.53333333rem;
+  line-height: 0.53333333rem;
+  color: #000;
+  font-size: 0.21333333rem;
+  font-weight: bold;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  background-color: #ededed;
+  border-bottom: 1px solid #ccc;
+}
+.row li a i {
+  float: right;
+  color: #919191;
+  line-height: 0.53333333rem;
+  font-size: 0.26666667rem;
+}
+.row li .item {
+  display: none;
+  border: none;
+}
+.row li .item li {
+  width: 33.33%;
+  float: left;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.row li .item li a {
+  display: block;
+  height: 0.53333333rem;
+  background-color: #fff;
+  font-weight: normal;
+  color: #333;
+  border: none;
+}
+.m_product .title {
+  height: 0.50666667rem;
+  font-size: 0.18666667rem;
+  background-color: #ebebeb;
+  line-height: 0.50666667rem;
+  padding: 0 0.10666667rem;
+}
+.m_product .title .select {
+  float: right;
+  height: 0.37333333rem;
+  display: block;
+  padding: 0 0.21333333rem;
+  text-align: center;
+  line-height: 0.37333333rem;
+  margin-top: 0.05333333rem;
+  border-radius: 0.05333333rem;
+  box-shadow: 0 1px 2px #888;
+  background-image: linear-gradient(to top, #d7d7d7, #f5f5f5);
+}
+.m_product .m_info .right #money {
+  height: 0.24rem;
+  color: #ea3900;
+  font-size: 0.24rem;
+  margin-bottom: 0.06666667rem;
+}
+.m_product .m_info .right #mall {
+  margin-bottom: 0.06666667rem;
+  height: 0.32rem;
+  line-height: 0.32rem;
+}
+.m_product .m_info .right #mall span {
+  font-size: 0.16rem;
+  color: #a1a1a1;
+  margin-right: 0.10666667rem;
+}

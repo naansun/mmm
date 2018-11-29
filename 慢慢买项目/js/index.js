@@ -6,7 +6,7 @@ $(function () {
     function render1() {
         $.ajax({
             type: 'get',
-            url: 'http://192.168.27.73:9090/api/getindexmenu',
+            url: ipAddress('getindexmenu'),
             dataType: 'json',
             success: function (info) {
                 console.log(info);
@@ -27,7 +27,7 @@ $(function () {
     //功能三：发送ajax请求  获取产品信息数据  进行动态渲染
     $.ajax({
         type: 'get',
-        url: 'http://192.168.27.73:9090/api/getmoneyctrl',
+        url: ipAddress('getmoneyctrl'),
         dataType: 'json',
         success: function (info) {
             console.log(info);

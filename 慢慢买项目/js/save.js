@@ -7,7 +7,7 @@ $(function () {
 
         $.ajax({
             type: 'get',
-            url: 'http://192.168.27.73:9090/api/getmoneyctrl',
+            url: ipAddress('getmoneyctrl'),
             data: {
                 pageid: pageid
             },
