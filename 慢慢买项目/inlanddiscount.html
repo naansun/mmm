@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>慢慢买首页</title>
+    <title>国内折区域</title>
     <!-- 引入样式 -->
     <link rel="stylesheet" href="./css/container.css">
     <link rel="stylesheet" href="./lib/fa字体图标库/css/font-awesome.css">
@@ -15,13 +15,12 @@
     <!-- 大容器 -->
     <div class="m_container">
         <!-- 头部区域 -->
-        <div class="m_header">
+        <div class="com">
             <!-- 首页导航区域 -->
-            <div class="m_logo">
-                <a href="#">
-                    <img src="./images/header_logo.png" alt="">
-                </a>
+            <div class="back">
+                <a href="javascript:history.back();" class="fa fa-angle-left"></a>
             </div>
+            <h1>国内折扣</h1>
             <!-- 下载logo -->
             <div class="down">
                 <a href="#">
@@ -29,26 +28,18 @@
                 </a>
             </div>
         </div>
-        <!-- 搜索区域 -->
-        <div class="m_search">
-            <input type="search" placeholder="请输入你想比价的商品">
-            <input type="button" value="搜索">
-        </div>
-        <!-- 表格切换区域 -->
-        <div class="row">
-            <ul>
-                <!-- 挖个大坑 -->
-
+        <!-- 产品区域 -->
+        <div class="main">
+            <ul class="clearfix">
+                <!-- 挖个坑 -->
             </ul>
-
         </div>
-
         <!-- 底部区域 -->
         <div class="m_footer">
             <div class="top">
                 <a href="">登录</a>
                 <a href="" class="login">注册</a>
-                <a href="javascript:;" style="width: 40%; border: 0;" id="return">
+                <a href="" style="width: 40%; border: 0;" id="return">
                     <img src="./images/top.jpg" alt="">
                     <span>返回顶部</span>
                 </a>
@@ -63,19 +54,21 @@
 
         </div>
     </div>
-    <script type="text/html" id="category">
+    <script type="text/html" id="island">
         {{each result v i}}
         <li>
-            <a href="javascript:;" data-id={{v.titleId}} index={{v.titleId}}><span>{{v.title}}</span><i class="fa fa-chevron-down arrow"></i></a>
-            <ul class="item clearfix">
-                <!-- 挖个坑 -->   
-            </ul>
+            <a href="discount.html?productId={{v.productId}}">
+                <div class="img">
+                    {{@v.productImg}}
+                </div>
+                <div class="tit">{{v.productName}}</div>
+                <div class="mall">{{v.productPrice}}</div>
+                <div class="time">
+                    <span>{{v.productFrom}}</span>
+                    <span>{{v.productTime}}</span>
+                </div>
+            </a>
         </li>
-        {{/each}}
-    </script>
-    <script type="text/html" id="category2">
-        {{each result v i}}
-        <li><a href="productlist.html?categoryid={{v.categoryId}}&category={{v.category}}&pageid=1" data-id={{v.categoryId}}>{{v.category}}</a></li>
         {{/each}}
     </script>
     <!-- 引入rem布局插件 -->
@@ -83,9 +76,9 @@
     <script src="./lib/flexible/flexible.js"></script>
     <!-- 模板引擎插件 -->
     <script src="./lib/template/template-web.js"></script>
-    <!-- 自身的js -->
-    <script src="./js/category.js"></script>
     <script src="./js/common.js"></script>
+    <!-- 引入自身的js -->
+    <script src="./js/inland.js"></script>
 </body>
 
 </html>

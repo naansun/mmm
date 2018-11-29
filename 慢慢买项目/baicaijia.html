@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>白菜价页面</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="./css/container.css">
+    <link rel="stylesheet" href="./lib/fa字体图标库/css/font-awesome.css">
+</head>
+
+<body>
+    <!-- 大容器 -->
+    <div class="m_container">
+        <!-- 头部区域 -->
+        <div class="com header">
+            <!-- 首页导航区域 -->
+            <div class="back">
+                <a href="javascript:history.back()" class="fa fa-angle-left"></a>
+            </div>
+            <h1>白菜价-淘宝内部券</h1>
+            <!-- 下载logo -->
+            <div class="down">
+                <a href="#">
+                    <img src="./images/header_app.png" alt="">
+                </a>
+            </div>
+        </div>
+        <!-- 主要内容区域 -->
+        <div class="bc_main">
+            <div class="title">
+                <div class="wrapper">
+                    <ul class="clearfix">
+                        <!-- 挖个坑 -->
+                    </ul>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-reorder"></i>
+                </div>
+            </div>
+            <div class="list">
+                <ul>
+                    <!-- 挖个坑 -->
+                </ul>
+            </div>
+        </div>
+        <!-- 底部区域 -->
+        <div class="m_footer">
+            <div class="top">
+                <a href="">登录</a>
+                <a href="" class="login">注册</a>
+                <a href="" style="width: 40%; border: 0;" id="return">
+                    <img src="./images/top.jpg" alt="">
+                    <span>返回顶部</span>
+                </a>
+            </div>
+            <div class="bottom">
+                <p>
+                    <a href="#" style="color:red">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    -- 掌上比价平台</p>
+                <p>m.manmanbuy.com</p>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/html" id="baicai">
+        {{each result v i}}
+        <li><a href="baicaijia.html?titleId={{v.titleId}}" class="{{i===0?'current':''}}">{{v.title}}</a></li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="baicai2">
+        {{each result v i}}
+        <li>
+            <a href="#">
+                <div class="pic">
+                    {{@v.productImg}}
+                </div>
+                <div class="info">
+                    <div class="i">
+                        <div class="t">
+                            {{@v.productName}}
+                        </div>
+                    </div>
+                    <div class="o"></div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <!-- 引入rem布局插件 -->
+    <script src="./lib/jquery/jquery.js"></script>
+    <script src="./lib/flexible/flexible.js"></script>
+    <!-- 模板引擎插件 -->
+    <script src="./lib/template/template-web.js"></script>
+    <script src="./js/common.js"></script>
+    <!-- 引入自身的js -->
+    <script src="./js/baicai.js"></script>
+    <!-- 引入区域滚动插件 -->
+    <script src="./lib/区域滚动插件/iscroll.js"></script>
+</body>
+
+</html>

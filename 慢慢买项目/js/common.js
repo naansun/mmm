@@ -24,3 +24,15 @@ function ipAddress(ip) {
     var ips = "http://192.168.27.49:9090/api/" + ip;
     return ips;
 }
+
+
+
+$(function () {
+    // 功能一：返回顶部操作
+    $('#return').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+
+    })
+})

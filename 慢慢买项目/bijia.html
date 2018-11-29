@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>慢慢买电视页</title>
+    <title>慢慢买商品详情页</title>
     <!-- 引入样式 -->
     <link rel="stylesheet" href="./css/container.css">
     <link rel="stylesheet" href="./lib/fa字体图标库/css/font-awesome.css">
@@ -34,24 +34,35 @@
             <input type="search" placeholder="请输入你想比价的商品">
             <input type="button" value="搜索">
         </div>
-        <!-- .产品区域 -->
+        <!-- .产品详情区域 -->
         <div class="m_product">
-            <!-- 挖个大坑 -->
             <div class="title">
+                <!-- 挖个坑 -->
+            </div>
+            <div class="b_detail">
+                <!-- 挖个坑 -->
+            </div>
+            <div class="tab">
+                <ul class="clearfix">
+                    <li class="bi"><a href="#">比价购买</a></li>
+                    <li class="jia"><a href="#">比价购买</a></li>
+                    <li><a href="#">比价购买</a></li>
+                </ul>
+            </div>
+            <div class="plist">
+                <!-- 动态生成区域 -->
                 <!-- 挖个坑 -->
 
             </div>
-            <div class="m_info">
+            <div class="com_title">网友评价</div>
+            <div class="com_list">
                 <ul>
                     <!-- 挖个坑 -->
                 </ul>
+                <div class="more">查看更多评价</div>
             </div>
 
 
-        </div>
-        <!-- 分页区域 -->
-        <div class="page clearfix">
-            <!-- 挖个坑 -->
         </div>
         <!-- 底部区域 -->
         <div class="m_footer">
@@ -73,67 +84,70 @@
 
         </div>
     </div>
-    <!-- 第一个模板 -->
-    <script type="text/html" id="product1">
-        <a href="index.html">首页</a>>
-            <a href="category.html">全部分类页</a>>
-            {{each result v i}}
-            <a href="#">{{v.category}}</a>
-            {{/each}}
-            <a href="#" class="select">筛选</a>
-    </script>
-    <!-- 第二个模板 -->
-    <script type="text/html" id="product2">
-        <!-- 动态渲染 -->
+    <!-- 模板一 -->
+    <script type="text/html" id="detail1">
         {{each result v i}}
-            <li>
-                <a href="bijia.html?productid={{v.productId}}&category={{category}}&url={{url}}">
-                   <div class="pic">
-                       {{#v.productImg}}
-                   </div>
-                   <div class="right">
-                       <p>{{v.productName}}</p>
-                       <p id="money">{{v.productPrice}}</p>
-                       <p id="mall">
-                           <span>{{v.productQuote}}</span>
-                           <span>{{v.productCom}}</span>
-                       </p>
-                   </div>
-                </a>
-            </li>
+        <div class="b_name">{{v.productName}}</div>
+        <div class="img">
+            {{@v.productImg}}
+        </div>
+        {{/each}}
+        <div class="icon">
+            <a href="3">
+                <img src="./images/sc.jpg" alt="">
+            </a>
+        </div>
+    </script>
+    <!-- 模板二 -->
+    <script type="text/html" id="detail2">
+        <a href="index.html">首页</a>>
+        <a href="productlist.html{{url}}">{{cate}}</a>>
+        {{each result v i}}
+        <%
+        var str = v.productName.slice(0,12)+'...';
+        <!-- console.log(str) -->
+        %>
+        <a href="#">{{str}}</a>
+        {{/each}}
+        <a href="#" class="select">筛选</a>
+    </script>
+    <!-- 模板三 -->
+    <script type="text/html" id="detail3">
+        <a href="#">
+            {{each result v i}}
+            {{@v.bjShop}}
+            {{/each}}
+        </a>
+        <div class="note">
+                * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+        </div>
+    </script>
+    <!-- 模板四 -->
+    <script type="text/html" id="detail4">
+        {{each result v i}}
+        <li>
+            <div class="name">
+                <span class="pull-left">{{v.comName}}</span>
+                <span class="pull-right">{{v.comTime}}</span>
+            </div>
+            <div class="dress">
+                <span class="pull-right">{{v.comFrom}}</span>
+            </div>
+            <div class="content">
+                {{v.comContent}}
+            </div>
+        </li>
         {{/each}}
     </script>
-    <!-- 第三个模板 -->
-    <script type="text/html" id="product3">
-        <span><a href="javascript:;" id="pre">上一页</a></span>
-        <span>
-            <select name="" id="selectPage" style="border: 1px solid #bababa; font-size: 16px; padding: 8px 15px; height: 36px">
-                <%
-                var num = $imports.int(totalCount/pagesize);
-                for(var i = 1;i<=num;i++){
-                %>
-                <option value='{{i}}'>{{i}}/{{num}}</option>
-                <%
-                }
-                %>
-            </select>
-        </span>
-        <span><a href="javascript:;" id="next">下一页</a></span> 
-    </script>
-
-
-
-
 
     <!-- 引入rem布局插件 -->
     <script src="./lib/jquery/jquery.js"></script>
     <script src="./lib/flexible/flexible.js"></script>
     <!-- 模板引擎插件 -->
     <script src="./lib/template/template-web.js"></script>
-    <!-- 自身的js -->
-    <script src="./js/product.js"></script>
     <!-- 引入公共的js -->
     <script src="./js/common.js"></script>
+    <script src="./js/bijia.js"></script>
 </body>
 
 </html>

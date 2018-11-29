@@ -54,7 +54,7 @@
                     <!-- 第二个坑 -->
                 </ul>
                 <div class="more">
-                    <a href="save.html">更多优惠信息 »</a>
+                    <a href="moneyctrl.html">更多优惠信息 »</a>
                 </div>
             </div>
         </div>
@@ -101,7 +101,7 @@
     <script type="text/html" id="product">
         {{each result v i}}
         <li>
-            <a href="#">
+            <a href="moneyproduct.html?productid={{v.productId}}">
                 <div class="pic">
                     {{#v.productImg2}}
                 </div>
@@ -114,8 +114,8 @@
                         <span class="spc"><i class="fa fa-commenting-o"></i>
                             <%
                             var str = v.productComCount;
-                            var arr = str.split('');
-                            var num = arr[1];
+                            var num = str.split('人')[0].slice(1);
+                            <!-- var num = arr[1]; -->
                             %>
                             {{num}}
                         </span>
@@ -131,8 +131,6 @@
     <!-- 模板引擎插件 -->
     <script src="./lib/template/template-web.js"></script>
     <script src="./js/index.js"></script>
-    <!-- 返回顶部js -->
-    <script src="./js/return.js"></script>
     <script src="./js/common.js"></script>
 </body>
 

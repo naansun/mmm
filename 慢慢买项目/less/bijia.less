@@ -1,0 +1,151 @@
+/*产品详情区域*/
+
+.b_detail {
+  height: 370rem / @base;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+  .b_name {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 16rem / @base;
+    height: 200rem / @base;
+    font-size: 17rem / @base;
+  }
+  .img {
+    display: block;
+    width: 170rem / @base;
+    height: 170rem / @base;
+    margin: 0 auto;
+  }
+  .icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 24rem / @base;
+    a {
+      display: block;
+      img {
+        width: 39rem / @base;
+        height: 39rem / @base;
+      }
+    }
+  }
+}
+
+.tab {
+  margin-top: 20rem / @base;
+  ul {
+    border: 1px solid #c14d00;
+    li {
+      &.bi {
+        background-image: linear-gradient(to bottom, #ffa632, #ff9000);
+      }
+      &.jia {
+        border-left: 1px solid #c14d00;
+        border-right: 1px solid #c14d00;
+      }
+      float: left;
+      width: 33.33%;
+      height: 34rem / @base;
+      text-align: center;
+      line-height: 34rem / @base;
+      background-image: linear-gradient(to bottom, #ffd050, #ffbb00);
+      a {
+        display: block;
+        font-size: 16rem / @base;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.plist {
+  table {
+    margin-top: 12rem / @base;
+    border-bottom: 1px solid #ccc;
+    tr {
+      padding: 5rem / @base 10rem / @base;
+      td {
+        &:nth-child(4) {
+          padding-bottom: 5rem / @base;
+          padding-right: 5rem / @base;
+        }
+        a {
+          font-size: 16rem / @base;
+        }
+        &.p_pic {
+          width: 10%;
+          padding-top: 15rem / @base;
+          padding-left: 15rem / @base;
+          a {
+            img {
+              width: 16rem / @base;
+              height: 16rem / @base;
+              vertical-align: middle;
+            }
+          }
+        }
+        &.red {
+          width: 40%;
+          font-size: 16rem / @base;
+          color: red;
+          text-align: right;
+          padding-right: 20rem / @base;
+          padding-top: 5rem / @base;
+        }
+      }
+    }
+  }
+  .note {
+    font-size: 12rem / @base;
+    color: #888;
+    padding: 8rem / @base 10rem / @base;
+    line-height: 18rem / @base;
+  }
+}
+
+.com_title {
+  margin-top: 5rem / @base;
+  border-top: 4rem / @base solid #7a7a7a;
+  height: 34rem / @base;
+  background-color: #dbdbdb;
+  font-size: 14rem / @base;
+  text-align: center;
+  line-height: 30rem / @base;
+}
+
+.com_list {
+  ul {
+    li {
+      padding: 10rem / @base;
+      color: #666;
+      padding-bottom: 0;
+      border-bottom: 1px solid #ccc;
+      line-height: 18rem / @base;
+      margin-top: 3rem / @base;
+      font-size: 12rem / @base;
+      .name {
+        height: 18rem / @base;
+      }
+      .dress {
+        height: 18rem / @base;
+      }
+      .content {
+        padding-top: 5rem / @base;
+        padding-bottom: 5rem / @base;
+      }
+    }
+  }
+  .more {
+    height: 32rem / @base;
+    font-size: 14rem / @base;
+    line-height: 32rem / @base;
+    background-color: #d4d4d4;
+    text-align: center;
+    margin: 8rem / @base;
+    border-radius: 5rem / @base;
+    background-image: linear-gradient(to bottom, #f1f1f1, #d4d4d4);
+  }
+}

@@ -569,6 +569,9 @@ th {
   box-shadow: 0 1px 2px #888;
   background-image: linear-gradient(to top, #d7d7d7, #f5f5f5);
 }
+.m_product .m_info .right p {
+  margin-left: 0.13333333rem;
+}
 .m_product .m_info .right #money {
   height: 0.24rem;
   color: #ea3900;
@@ -584,4 +587,564 @@ th {
   font-size: 0.16rem;
   color: #a1a1a1;
   margin-right: 0.10666667rem;
+}
+/*产品详情区域*/
+.b_detail {
+  height: 4.93333333rem;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+.b_detail .b_name {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 0.21333333rem;
+  height: 2.66666667rem;
+  font-size: 0.22666667rem;
+}
+.b_detail .img {
+  display: block;
+  width: 2.26666667rem;
+  height: 2.26666667rem;
+  margin: 0 auto;
+}
+.b_detail .icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 0.32rem;
+}
+.b_detail .icon a {
+  display: block;
+}
+.b_detail .icon a img {
+  width: 0.52rem;
+  height: 0.52rem;
+}
+.tab {
+  margin-top: 0.26666667rem;
+}
+.tab ul {
+  border: 1px solid #c14d00;
+}
+.tab ul li {
+  float: left;
+  width: 33.33%;
+  height: 0.45333333rem;
+  text-align: center;
+  line-height: 0.45333333rem;
+  background-image: linear-gradient(to bottom, #ffd050, #ffbb00);
+}
+.tab ul li.bi {
+  background-image: linear-gradient(to bottom, #ffa632, #ff9000);
+}
+.tab ul li.jia {
+  border-left: 1px solid #c14d00;
+  border-right: 1px solid #c14d00;
+}
+.tab ul li a {
+  display: block;
+  font-size: 0.21333333rem;
+  color: #fff;
+}
+.plist table {
+  margin-top: 0.16rem;
+  border-bottom: 1px solid #ccc;
+}
+.plist table tr {
+  padding: 0.06666667rem 0.13333333rem;
+}
+.plist table tr td:nth-child(4) {
+  padding-bottom: 0.06666667rem;
+  padding-right: 0.06666667rem;
+}
+.plist table tr td a {
+  font-size: 0.21333333rem;
+}
+.plist table tr td.p_pic {
+  width: 10%;
+  padding-top: 0.2rem;
+  padding-left: 0.2rem;
+}
+.plist table tr td.p_pic a img {
+  width: 0.21333333rem;
+  height: 0.21333333rem;
+  vertical-align: middle;
+}
+.plist table tr td.red {
+  width: 40%;
+  font-size: 0.21333333rem;
+  color: red;
+  text-align: right;
+  padding-right: 0.26666667rem;
+  padding-top: 0.06666667rem;
+}
+.plist .note {
+  font-size: 0.16rem;
+  color: #888;
+  padding: 0.10666667rem 0.13333333rem;
+  line-height: 0.24rem;
+}
+.com_title {
+  margin-top: 0.06666667rem;
+  border-top: 0.05333333rem solid #7a7a7a;
+  height: 0.45333333rem;
+  background-color: #dbdbdb;
+  font-size: 0.18666667rem;
+  text-align: center;
+  line-height: 0.4rem;
+}
+.com_list ul li {
+  padding: 0.13333333rem;
+  color: #666;
+  padding-bottom: 0;
+  border-bottom: 1px solid #ccc;
+  line-height: 0.24rem;
+  margin-top: 0.04rem;
+  font-size: 0.16rem;
+}
+.com_list ul li .name {
+  height: 0.24rem;
+}
+.com_list ul li .dress {
+  height: 0.24rem;
+}
+.com_list ul li .content {
+  padding-top: 0.06666667rem;
+  padding-bottom: 0.06666667rem;
+}
+.com_list .more {
+  height: 0.42666667rem;
+  font-size: 0.18666667rem;
+  line-height: 0.42666667rem;
+  background-color: #d4d4d4;
+  text-align: center;
+  margin: 0.10666667rem;
+  border-radius: 0.06666667rem;
+  background-image: linear-gradient(to bottom, #f1f1f1, #d4d4d4);
+}
+/*国内产品折扣区域*/
+.main .content {
+  padding: 0.05333333rem 0.13333333rem;
+  background-color: #fff;
+}
+.main .content h3 {
+  font-size: 0.24rem;
+  font-weight: 800;
+  color: #5a5a5a;
+  text-align: left;
+  margin: 0.13333333rem auto 0.06666667rem auto;
+}
+.main .content .info {
+  margin: 0.16rem auto;
+  font-size: 0.16rem;
+  color: #999;
+}
+.main .content .info .mall,
+.main .content .info .addtime,
+.main .content .info .author {
+  margin: 0 0.05333333rem;
+}
+.main .content .content .pic {
+  width: 1.6rem;
+  float: right;
+  margin: 0.16rem auto auto 0.13333333rem;
+  overflow: hidden;
+  font-size: 0.18666667rem;
+}
+.main .content .content .pic img {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.main .content .content .con {
+  font-size: 0.21333333rem;
+  color: #606060;
+  line-height: 0.32rem;
+  padding-bottom: 0.26666667rem;
+}
+.main .content .content .con p {
+  margin: 0.08rem auto;
+}
+.main .content .content .con p img {
+  width: 4.66666667rem;
+  height: 4.66666667rem;
+}
+.main .content .content .area span.s {
+  position: relative;
+  display: inline-block;
+  line-height: 0.50666667rem;
+  line-height: 0.26666667rem;
+  padding: 0px 0.26666667rem 0px 0.21333333rem;
+}
+.main .content .content .area span.s .drop {
+  margin-left: 3.53333333rem;
+  background-color: #fff;
+  width: 1.84rem;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+  border-color: #f1f1f1 #f1f1f1 #dbdbdb #f1f1f1;
+  border-width: 0px 1px 1px 1px;
+  border-style: solid;
+  padding: 0px 0px 0.13333333rem 0px;
+}
+.main .content .content .area span.s .drop ul li {
+  width: 100%;
+  font-size: 0.16rem;
+  line-height: 0.26666667rem;
+  font-family: "Microsoft Yahei";
+}
+.main .content .content .area span.s .drop ul li a {
+  display: block;
+  padding: 0 0.13333333rem;
+}
+.main .content .content .area span.s .drop ul li a span {
+  border-bottom: 1px dotted #d0d0d0;
+  padding: 0 0.13333333rem;
+  text-align: left;
+  display: block;
+}
+.main .content .content .area span.s .drop ul li a span strong {
+  float: right;
+  font-weight: normal;
+  color: #f27b04;
+}
+.main .content .golink {
+  height: 0.4rem;
+  background-color: #ff841d;
+  border-radius: 0.05333333rem;
+}
+.main .content .golink a {
+  display: block;
+  text-align: center;
+  line-height: 0.4rem;
+  color: #fff;
+  font-size: 0.18666667rem;
+  margin: 0.26666667rem 0.13333333rem;
+}
+.main .erweima {
+  text-align: center;
+  margin: 0.26666667rem 0.13333333rem;
+}
+.main .cu-content-pl {
+  background-color: #fff;
+}
+.main .cu-content-pl .tit {
+  font-size: 0.21333333rem;
+  padding: 0.08rem 0.10666667rem;
+}
+.main .cu-content-pl .reply {
+  padding: 0.08rem 0.10666667rem;
+}
+.main .cu-content-pl .reply .form {
+  border: 0.02666667rem solid #eceae8;
+  border-radius: 0.02666667rem;
+  padding: 0.05333333rem 0 0 0.05333333rem;
+  width: 98%;
+  margin: 0 auto;
+  position: relative;
+}
+.main .cu-content-pl .reply .form textarea {
+  width: 100%;
+  border: none;
+  line-height: 0.29333333rem;
+  font-size: 14px;
+  color: #666;
+  height: 0.90666667rem;
+}
+.main .cu-content-pl .reply .form .ctrl {
+  background-color: #fbfbfb;
+  height: 0.48rem;
+  margin-left: -0.05333333rem;
+  border-top: solid 1px #f2f2f2;
+}
+.main .cu-content-pl .reply .form .ctrl input {
+  position: absolute;
+  right: -0.01333333rem;
+  bottom: -0.02666667rem;
+  background: #ff841d;
+  border: none;
+  width: 1.33333333rem;
+  height: 0.52rem;
+  color: #fff;
+  font-size: 0.21333333rem;
+  border-radius: 0.05333333rem;
+}
+.main .cu-content-pl .list ul {
+  overflow: hidden;
+}
+.main .cu-content-pl .list ul li {
+  width: 100%;
+  padding: 0.24rem 0.13333333rem;
+  background-color: #ffffff;
+}
+.main .cu-content-pl .list ul li .userimg {
+  width: 0.53333333rem;
+  float: left;
+  overflow: hidden;
+}
+.main .cu-content-pl .list ul li .con {
+  padding-left: 0.13333333rem;
+  overflow: hidden;
+}
+.main .cu-content-pl .list ul li .con .name {
+  font-size: 0.18666667rem;
+  margin-bottom: 0.08rem;
+}
+.main .cu-content-pl .list ul li .con .name .username {
+  color: #5997c0;
+  font-size: 0.17333333rem !important;
+  float: left;
+}
+.main .cu-content-pl .list ul li .con .name .time {
+  color: #999;
+  font-size: 0.17333333rem !important;
+  float: right;
+}
+.main .cu-content-pl .list ul li .con .content {
+  font-size: 0.2rem !important;
+  color: #606060;
+  line-height: 0.26666667rem;
+}
+.main ul li {
+  float: left;
+  width: 50%;
+  border: 1px solid #eee;
+  padding-top: 0.13333333rem;
+  padding-left: 0.13333333rem;
+}
+.main ul li a {
+  display: block;
+}
+.main ul li a .img {
+  width: 1.86666667rem;
+  height: 1.86666667rem;
+  margin: 0.13333333rem auto;
+}
+.main ul li a .img img {
+  width: 100%;
+  height: 100%;
+  font-size: 0.18666667rem;
+}
+.main ul li a .tit {
+  color: #333;
+  padding: 0 0.10666667rem;
+  font-size: 0.18666667rem;
+  height: 0.48rem;
+  line-height: 0.24rem;
+  text-align: left;
+  font-weight: bold;
+  word-break: break-all;
+}
+.main ul li a .mall {
+  color: #ff6c00;
+  font-size: 0.18666667rem;
+  margin-top: 0.05333333rem;
+  padding: 0 0.10666667rem;
+  height: 0.24rem;
+  line-height: 0.24rem;
+}
+.main ul li a .time {
+  padding: 0.08rem 0.10666667rem;
+  line-height: 0.32rem;
+}
+.main ul li a .time span {
+  font-size: 0.16rem;
+  color: #a1a1a1;
+}
+/*国内产品折扣区域*/
+.main .content {
+  padding: 0.05333333rem 0.13333333rem;
+  background-color: #fff;
+}
+.main .content h3 {
+  font-size: 0.24rem;
+  font-weight: 800;
+  color: #5a5a5a;
+  text-align: left;
+  margin: 0.13333333rem auto 0.06666667rem auto;
+}
+.main .content h4 {
+  color: #ff6c00;
+  display: block;
+  font-size: 15px;
+}
+.main .content .info {
+  margin: 0.16rem auto;
+  font-size: 0.16rem;
+  color: #999;
+}
+.main .content .info .mall,
+.main .content .info .addtime,
+.main .content .info .author {
+  margin: 0 0.05333333rem;
+}
+.main .content .content .pic {
+  width: 1.6rem;
+  float: right;
+  margin: 0.16rem auto auto 0.13333333rem;
+  overflow: hidden;
+  font-size: 0.18666667rem;
+}
+.main .content .content .pic img {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.main .content .content .con {
+  font-size: 0.21333333rem;
+  color: #606060;
+  line-height: 0.32rem;
+  padding-bottom: 0.26666667rem;
+}
+.main .content .content .con p {
+  margin: 0.08rem auto;
+}
+.main .content .content .con p img {
+  width: 4.66666667rem;
+  height: 4.66666667rem;
+}
+.main .content .golink {
+  height: 0.4rem;
+  background-color: #ff841d;
+  border-radius: 0.05333333rem;
+}
+.main .content .golink a {
+  display: block;
+  text-align: center;
+  line-height: 0.4rem;
+  color: #fff;
+  font-size: 0.18666667rem;
+  margin: 0.26666667rem 0.13333333rem;
+}
+.main .erweima {
+  text-align: center;
+  margin: 0.26666667rem 0.13333333rem;
+}
+.main .tit {
+  font-size: 0.21333333rem;
+  padding: 0.08rem 0.10666667rem;
+}
+.main .reply {
+  padding: 0.08rem 0.10666667rem;
+}
+.main .reply .form {
+  border: 0.02666667rem solid #eceae8;
+  border-radius: 0.02666667rem;
+  padding: 0.05333333rem 0 0 0.05333333rem;
+  width: 98%;
+  margin: 0 auto;
+  position: relative;
+}
+.main .reply .form textarea {
+  width: 100%;
+  border: none;
+  line-height: 0.29333333rem;
+  font-size: 14px;
+  color: #666;
+  height: 0.90666667rem;
+}
+.main .reply .form .ctrl {
+  background-color: #fbfbfb;
+  height: 0.48rem;
+  margin-left: -0.05333333rem;
+  border-top: solid 1px #f2f2f2;
+}
+.main .reply .form .ctrl input {
+  position: absolute;
+  right: -0.01333333rem;
+  bottom: -0.02666667rem;
+  background: #ff841d;
+  border: none;
+  width: 1.33333333rem;
+  height: 0.52rem;
+  color: #fff;
+  font-size: 0.21333333rem;
+  border-radius: 0.05333333rem;
+}
+.main .list ul li {
+  padding: 0.24rem 0.13333333rem;
+  background-color: #ffffff;
+}
+.main .list ul li .userimg {
+  width: 0.53333333rem;
+  float: left;
+  overflow: hidden;
+}
+.main .list ul li .con {
+  padding-left: 0.13333333rem;
+  overflow: hidden;
+}
+.main .list ul li .con .name {
+  font-size: 0.18666667rem;
+  margin-bottom: 0.08rem;
+}
+.main .list ul li .con .name .username {
+  color: #5997c0;
+  font-size: 0.17333333rem !important;
+  float: left;
+}
+.main .list ul li .con .name .time {
+  color: #999;
+  font-size: 0.17333333rem !important;
+  float: right;
+}
+.main .list ul li .con .content {
+  font-size: 0.2rem !important;
+  color: #606060;
+  line-height: 0.26666667rem;
+}
+.header {
+  background-color: #f4483e;
+}
+.bc_main .title {
+  height: 0.53333333rem;
+  background-color: #fff;
+  position: relative;
+}
+.bc_main .title .wrapper {
+  overflow: hidden;
+}
+.bc_main .title .wrapper ul li {
+  font-size: 0.18666667rem;
+  line-height: 0.53333333rem;
+  float: left;
+}
+.bc_main .title .wrapper ul li a {
+  display: block;
+  margin: 0 0.16rem;
+}
+.bc_main .title .wrapper ul li a.current {
+  color: #e4393c;
+  border-bottom: 2px solid #e4393c;
+}
+.bc_main .title .icon {
+  position: absolute;
+  background-color: #fff;
+  right: 0;
+  top: 0;
+  text-align: center;
+  line-height: 0.53333333rem;
+  width: 0.50666667rem;
+  height: 0.53333333rem;
+  border-left: 1px solid #e6e6e6;
+}
+.bc_main .title .icon i {
+  color: #7f7f7f;
+}
+.bc_main .list ul li .pic {
+  width: 1.8rem;
+  height: 1.73333333rem;
+}
+.bc_main .list ul li .pic img {
+  height: 1.73333333rem;
+  width: 1.73333333rem;
+  border: none;
+}
+.bc_main .list ul li .info .i {
+  font-size: 0.18666667rem;
+}
+.bc_main .list ul li .info .i .t {
+  min-height: 0.37333333rem;
+  max-height: 0.53333333rem;
+  line-height: 1.5;
+  font-weight: 400;
 }

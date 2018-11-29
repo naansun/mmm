@@ -1,0 +1,70 @@
+// 头部区域
+.header {
+    background-color: #f4483e;
+}
+
+.bc_main {
+    .title {
+        height: 40rem / @base;
+        background-color: #fff;
+        position: relative; // overflow: hidden;
+        .wrapper {
+            overflow: hidden;
+            ul {
+                li {
+                    font-size: 14rem / @base;
+                    line-height: 40rem / @base;
+                    float: left;
+                    a {
+                        display: block;
+                        margin: 0 12rem / @base;
+                        &.current {
+                            color: #e4393c;
+                            border-bottom: 2px solid #e4393c;
+                        }
+                    }
+                }
+            }
+        }
+        .icon {
+            position: absolute;
+            background-color: #fff;
+            right: 0;
+            top: 0; // z-index: 999;
+            text-align: center;
+            line-height: 40rem / @base;
+            width: 38rem / @base;
+            height: 40rem / @base;
+            border-left: 1px solid #e6e6e6;
+            i {
+                color: #7f7f7f;
+            }
+        }
+    }
+    .list {
+        ul {
+            li {
+                .pic {
+                    width: 135rem / @base;
+                    height: 130rem / @base; // float: left;
+                    img {
+                        height: 130rem / @base;
+                        width: 130rem / @base;
+                        border: none;
+                    }
+                }
+                .info {
+                    .i {
+                        font-size: 14rem / @base;
+                        .t {
+                            min-height: 28rem/@base;
+                            max-height: 40rem/@base;
+                            line-height: 1.5;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
