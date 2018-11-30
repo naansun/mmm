@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>优惠页</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="./css/container.css">
+    <link rel="stylesheet" href="./lib/fa字体图标库/css/font-awesome.css">
+</head>
+
+<body>
+    <!-- 大容器 -->
+    <div class="m_container">
+        <!-- 头部区域 -->
+        <div class="com">
+            <!-- 首页导航区域 -->
+            <div class="back">
+                <a href="index.html" class="fa fa-angle-left"></a>
+            </div>
+            <h1>凑单品</h1>
+            <!-- 下载logo -->
+            <div class="down">
+                <a href="#">
+                    <img src="./images/header_app.png" alt="">
+                </a>
+            </div>
+        </div>
+        <!-- 产品区域 -->
+        <div class="gs_pro">
+            <div class="gs_hd">
+                <div class="info">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="#" class="shop">
+                                <span>京东</span>
+                                <i class="fa fa-sort-asc "></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="di">
+                                <span>华北</span>
+                                <i class="fa fa-sort-asc "></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="pri">全部价格
+                                <i class="fa fa-sort-asc "></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search fa fa-search"></div>
+                <!-- 各种下拉框 -->
+                <div class="list" id="shop">
+                    <ul>
+                        <!-- 挖个坑 -->
+                    </ul>
+                </div>
+                <div class="list" id="area">
+                    <ul>
+                        <!-- 挖个坑 -->
+                    </ul>
+                </div>
+                <div class="list" id="price">
+                    <ul>
+                        <li>
+                            <a href="#">全部价格
+                                <i class="fa fa-check"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="gs_list">
+                <ul class="clearfix">
+                    <!-- 挖个坑 -->
+                </ul>
+            </div>
+        </div>
+        <!-- 底部区域 -->
+        <div class="m_footer">
+            <div class="top">
+                <a href="">登录</a>
+                <a href="" class="login">注册</a>
+                <a href="" style="width: 40%; border: 0;" id="return">
+                    <img src="./images/top.jpg" alt="">
+                    <span>返回顶部</span>
+                </a>
+            </div>
+            <div class="bottom">
+                <p>
+                    <a href="#" style="color:red">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    -- 掌上比价平台</p>
+                <p>m.manmanbuy.com</p>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/html" id="list">
+        {{each result v i}}
+        <li>
+            <a href="#" data-id={{v.shopId}} data-title={{v.shopName}}>{{v.shopName}}
+                <i class="fa fa-check"></i>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="list2">
+        {{each result v i}}
+        <%
+        var str = v.areaName;
+        var str = str.slice(0,2);
+        %>
+        <li>
+            <a href="#" data-id={{v.areaId}} data-title={{str}}>{{v.areaName}}
+                <i class="fa fa-check"></i>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="list3">
+        {{each result v i}}
+        <li>
+            <a href="{{v.productImg}}">
+                <div class="pic">
+                    <img src="{{v.productImg}}" alt="">
+                </div>
+                <div class="title">{{v.productName}}</div>
+                <div class="other clearfix">
+                    <span class="spc">{{v.productPrice}}</span>
+                    <span class='btn'>去凑单</span>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <!-- 引入rem布局插件 -->
+    <script src="./lib/jquery/jquery.js"></script>
+    <script src="./lib/flexible/flexible.js"></script>
+    <!-- 模板引擎插件 -->
+    <script src="./lib/template/template-web.js"></script>
+    <script src="./js/gs.js"></script>
+    <script src="./js/common.js"></script>
+</body>
+
+</html>

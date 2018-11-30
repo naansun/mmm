@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>白菜价页面</title>
+    <title>优惠券页面</title>
     <!-- 引入样式 -->
     <link rel="stylesheet" href="./css/container.css" />
     <link rel="stylesheet" href="./lib/fa字体图标库/css/font-awesome.css" />
@@ -20,24 +20,19 @@
             <div class="back">
                 <a href="index.html" class="fa fa-angle-left"></a>
             </div>
-            <h1>白菜价-淘宝内部券</h1>
+            <h1>优惠券</h1>
             <!-- 下载logo -->
             <div class="down">
                 <a href="#"> <img src="./images/header_app.png" alt="" /> </a>
             </div>
         </div>
-        <!-- 主要内容区域 -->
-        <div class="bc_main">
+        <!-- 内容区域 -->
+        <div class="product">
             <div class="title">
-                <div class="wrapper">
-                    <ul class="clearfix">
-                        <!-- 挖个坑 -->
-                    </ul>
-                </div>
-                <div class="icon"><i class="fa fa-reorder"></i></div>
+                --点餐前出示手机中的优惠券，即可享受优惠--
             </div>
-            <div class="list">
-                <ul>
+            <div class="y_main">
+                <ul class="clearfix">
                     <!-- 挖个坑 -->
                 </ul>
             </div>
@@ -59,43 +54,31 @@
             </div>
         </div>
     </div>
-    <script type="text/html" id="baicai">
+    <script type="text/html" id="coup">
         {{each result v i}}
-      <li><a href="javascript:;" class="{{i===0?'current':''}}" data-id={{v.titleId}}>{{v.title}}</a></li>
-      {{/each}}
-    </script>
-    <script type="text/html" id="baicai2">
-        {{each result v i}}
-      <li>
-          <a href="#">
-              <div class="pic">
-                  {{@v.productImg}}
-              </div>
-              <div class="info">
-                  <div class="i">
-                      <div class="t">
-                          {{@v.productName}}
-                      </div>
-                      <div class='pr'>
-                          {{@v.productPrice}}
-                      </div>
-                  </div>
-                  <div class="o">
-                      {{@v.productCouponRemain}}
-                      <div class="b">
-                          <div class="you">
-                              {{@v.productCoupon}}
-                          </div>
-                          <div class="link">
-                              {{@v.productHref}}
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </a>
-      </li>
-      {{/each}}
-    </script>
+        <li>
+            <%
+            var str = v.couponProductImg;
+            var arr = str.split('=');
+            var arr1 = arr[1].split('"');
+            var arr2 = arr[2].split('"');
+            %>
+            <a href="{{arr1[1]}}" title="{{arr2[1]}}">
+                <div class="pic">
+                    {{@v.couponProductImg}}
+                </div>
+                <div class="right">
+                    <div class="tit">
+                        <h3>{{v.couponProductName}}</h3>
+                        <h2>{{v.couponProductPrice}}</h2>
+                    </div>
+                    <div class="time">{{v.couponProductTime}}</div>
+                </div>
+                <div class="icon fa fa-angle-right"></div>
+            </a>
+        </li>
+        {{/each}}
+        </script>
     <!-- 引入rem布局插件 -->
     <script src="./lib/jquery/jquery.js"></script>
     <script src="./lib/flexible/flexible.js"></script>
@@ -103,7 +86,7 @@
     <script src="./lib/template/template-web.js"></script>
     <script src="./js/common.js"></script>
     <!-- 引入自身的js -->
-    <script src="./js/baicai.js"></script>
+    <script src="./js/coup.js"></script>
     <!-- 引入区域滚动插件 -->
     <script src="./lib/区域滚动插件/iscroll.js"></script>
 </body>

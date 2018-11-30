@@ -21,7 +21,7 @@ function getSearch(name) {
 }
 
 function ipAddress(ip) {
-    var ips = "http://192.168.27.49:9090/api/" + ip;
+    var ips = "http://192.168.27.37:9090/api/" + ip;
     return ips;
 }
 

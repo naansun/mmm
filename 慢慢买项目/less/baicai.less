@@ -1,66 +1,183 @@
 // 头部区域
-.header {
-    background-color: #f4483e;
-}
-
-.bc_main {
-    .title {
-        height: 40rem / @base;
-        background-color: #fff;
-        position: relative; // overflow: hidden;
-        .wrapper {
-            overflow: hidden;
-            ul {
-                li {
-                    font-size: 14rem / @base;
-                    line-height: 40rem / @base;
-                    float: left;
-                    a {
-                        display: block;
-                        margin: 0 12rem / @base;
-                        &.current {
-                            color: #e4393c;
-                            border-bottom: 2px solid #e4393c;
+.big {
+    background-color: #f7f7f7;
+    .header {
+        background-color: #f4483e;
+    }
+    .bc_main {
+        font-family: arial;
+        .title {
+            height: 40rem / @base;
+            background-color: #fff;
+            position: relative; // overflow: hidden;
+            color: #000;
+            position: relative;
+            .wrapper {
+                overflow: hidden;
+                ul {
+                    position: absolute;
+                    left: 0;
+                    li {
+                        font-size: 14rem / @base;
+                        line-height: 40rem / @base;
+                        float: left;
+                        a {
+                            display: block;
+                            margin: 0 12rem / @base;
+                            &.current {
+                                color: #e4393c;
+                                border-bottom: 2px solid #e4393c;
+                            }
                         }
                     }
                 }
             }
-        }
-        .icon {
-            position: absolute;
-            background-color: #fff;
-            right: 0;
-            top: 0; // z-index: 999;
-            text-align: center;
-            line-height: 40rem / @base;
-            width: 38rem / @base;
-            height: 40rem / @base;
-            border-left: 1px solid #e6e6e6;
-            i {
-                color: #7f7f7f;
+            .icon {
+                position: absolute;
+                background-color: #fff;
+                right: 0;
+                top: 0; // z-index: 999;
+                text-align: center;
+                line-height: 40rem / @base;
+                width: 38rem / @base;
+                height: 40rem / @base;
+                border-left: 1px solid #e6e6e6;
+                i {
+                    color: #7f7f7f;
+                }
             }
         }
-    }
-    .list {
-        ul {
-            li {
-                .pic {
-                    width: 135rem / @base;
-                    height: 130rem / @base; // float: left;
-                    img {
-                        height: 130rem / @base;
-                        width: 130rem / @base;
-                        border: none;
+        .list {
+            ul {
+                li {
+                    position: relative;
+                    margin: 6rem / @base auto;
+                    background-color: #fff;
+                    a {
+                        display: block;
+                        .pic {
+                            width: 135rem / @base;
+                            height: 130rem / @base; // float: left;
+                            img {
+                                height: 130rem / @base;
+                                width: 130rem / @base;
+                                border: none;
+                            }
+                        }
                     }
-                }
-                .info {
-                    .i {
+                    .info {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        padding-left: 138rem / @base;
+                        width: 100%;
+                        color: #000;
                         font-size: 14rem / @base;
-                        .t {
-                            min-height: 28rem/@base;
-                            max-height: 40rem/@base;
-                            line-height: 1.5;
-                            font-weight: 400;
+                        padding-top: 5rem / @base;
+                        a {
+                            display: block;
+                            overflow: hidden;
+                            .i {
+                                float: left;
+                                text-align: left;
+                                width: 100%;
+                                .t {
+                                    min-height: 28rem / @base;
+                                    max-height: 40rem / @base;
+                                    line-height: 1.5;
+                                    font-weight: 400;
+                                }
+                                .pr {
+                                    font-size: 24rem / @base;
+                                    color: #fc353a;
+                                    margin-top: 4rem / @base;
+                                    width: 100%;
+                                    em {
+                                        font-size: 12rem / @base;
+                                        font-style: normal;
+                                    }
+                                    i {
+                                        font-size: 16rem / @base;
+                                        vertical-align: middle;
+                                        font-style: normal;
+                                        margin-right: 4rem / @base;
+                                    }
+                                    del {
+                                        font-size: 13rem / @base;
+                                        color: #a8a8a8;
+                                        margin-left: 12rem / @base;
+                                    }
+                                }
+                            }
+                        }
+                        .o {
+                            width: 100%;
+                            box-sizing: border-box;
+                            .bar {
+                                height: 25rem / @base;
+                                .goquan {
+                                    display: block;
+                                    width: 120rem / @base;
+                                    height: 60rem / @base;
+                                    position: absolute;
+                                }
+                                i {
+                                    height: 14rem / @base;
+                                    line-height: 14rem / @base;
+                                    width: 82rem / @base;
+                                    border: 1px solid #fc353a;
+                                    border-radius: 6rem / @base;
+                                    color: #fff; // font-weight: 900;
+                                    background: #ffb7b7;
+                                    display: inline-block;
+                                    text-align: center;
+                                    span {
+                                        display: block;
+                                        width: 100%;
+                                        height: 100%;
+                                        font-size: 12rem / @base;
+                                        line-height: 11rem / @base;
+                                    }
+                                }
+                                b {
+                                    font-size: 12rem / @base;
+                                    color: #fc353a;
+                                    margin-left: 10rem / @base;
+                                    font-weight: normal;
+                                }
+                            }
+                            .b {
+                                height: 28rem / @base;
+                                width: 100%;
+                                padding-right: 10rem / @base;
+                                .you {
+                                    float: left;
+                                    a {
+                                        display: block;
+                                        border: 1px dotted #e4393c;
+                                        height: 26rem / @base;
+                                        line-height: 26rem / @base;
+                                        text-align: center;
+                                        padding: 0px 5rem / @base;
+                                        font-size: 12px;
+                                        color: #e4393c;
+                                    }
+                                }
+                                .link {
+                                    float: right;
+                                    a {
+                                        height: 28rem / @base;
+                                        line-height: 28rem / @base;
+                                        text-align: center;
+                                        display: block;
+                                        background-color: #ff5e5d;
+                                        color: #fff;
+                                        border-radius: 4rem / @base;
+                                        padding: 0px 5rem / @base;
+                                        font-size: 12rem / @base;
+                                    }
+                                }
+                            }
                         }
                     }
                 }

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>品牌大全首页</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="./css/container.css">
+    <link rel="stylesheet" href="./lib/fa字体图标库/css/font-awesome.css">
+</head>
+
+<body>
+    <!-- 大容器 -->
+    <div class="m_container">
+        <!-- 头部区域 -->
+        <div class="m_header">
+            <!-- 首页导航区域 -->
+            <div class="m_logo">
+                <a href="index.html">
+                    <img src="./images/header_logo.png" alt="">
+                </a>
+            </div>
+            <!-- 下载logo -->
+            <div class="down">
+                <a href="#">
+                    <img src="./images/header_app.png" alt="">
+                </a>
+            </div>
+        </div>
+        <!-- 搜索区域 -->
+        <div class="m_search">
+            <input type="search" placeholder="请输入你想比价的商品">
+            <input type="button" value="搜索">
+        </div>
+        <!-- 内容区域 -->
+        <div class="br_main">
+            <!-- 标题区域 -->
+            <div class="title">
+                <a href="index.html">首页 ></a>
+                <a href="category.html">全部分类 ></a>
+            </div>
+            <!-- 排行区域 -->
+            <div class="line line2">平板电视哪个牌子好</div>
+            <!-- 电视销量排行区域 -->
+            <div class="b2_content">
+                <ul>
+                    <!-- 挖个坑 -->
+                </ul>
+            </div>
+            <div class="line line2">平板电视产品销量排行</div>
+            <!-- 电视具体信息区域 -->
+            <div class="b3_content">
+                <ul>
+                    <!-- 挖个坑 -->
+                </ul>
+            </div>
+            <div class="line line2">平板电视最新评论</div>
+            <!-- 电视评价区域 -->
+            <div class="b4_content">
+                <ul>
+                    <!-- 挖个坑 -->
+                </ul>
+            </div>
+        </div>
+        <!-- 底部区域 -->
+        <div class="m_footer">
+            <div class="top">
+                <a href="">登录</a>
+                <a href="" class="login">注册</a>
+                <a href="javascript:;" style="width: 40%; border: 0;" id="return">
+                    <img src="./images/top.jpg" alt="">
+                    <span>返回顶部</span>
+                </a>
+            </div>
+            <div class="bottom">
+                <p>
+                    <a href="#" style="color:red">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    -- 掌上比价平台</p>
+                <p>m.manmanbuy.com</p>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/html" id="brand2">
+        {{each result v i}}
+        <li>
+            <a href="productlist.html?categoryid=0&category=电视&pageid=1">
+                <em class="top{{i+1}}">{{i+1}}</em>
+                <div class="inner">
+                    <div class="tit">{{v.brandName}}</div>
+                    <p>{{v.brandInfo}}</p>
+                </div>
+                <i class="fa fa-hand-o-right"></i>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="brand3">
+        {{each result v i}}
+        <li>
+          <a href="bijia.html?productid={{v.productId}}" data-id={{v.productId}}>
+              <div class="pic">
+                  {{@v.productImg}}
+              </div>
+              <div class="info">
+                  <div class="tit">{{v.productName}}</div>
+                  <div class="price">
+                      <em>{{v.productPrice}}</em>
+                      <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                      </span>
+                  </div>
+                  <div class="other">
+                      <span>{{v.productQuote}}</span>
+                      <span>{{v.productCom}}</span>
+                  </div>
+              </div>
+          </a>
+        </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="brand4">
+        {{each result v i}}
+        <li>
+            <a href="#">
+                <div class="comtit">
+                    <div class="pic">
+                        <img src="./images/tv.jpg" alt="">
+                    </div>
+                    <div class="tit">乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</div>
+                </div>
+                <div class="combox">
+                    <div class="name">
+                        <span>{{v.comName}}</span>
+                        <span>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </span>
+                        <span class="spc1">{{v.comTime}}</span>
+                    </div>
+                    <div class="comm">
+                        {{v.comContent}}
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <!-- 引入rem布局插件 -->
+    <script src="./lib/jquery/jquery.js"></script>
+    <script src="./lib/flexible/flexible.js"></script>
+    <!-- 模板引擎插件 -->
+    <script src="./lib/template/template-web.js"></script>
+    <!-- 自身的js -->
+    <script src="./js/brand2.js"></script>
+    <script src="./js/common.js"></script>
+</body>
+
+</html>

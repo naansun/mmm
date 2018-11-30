@@ -7,7 +7,7 @@ $(function () {
         success: function (info) {
             console.log(info);
             var htmlStr = template('island', info);
-            $('.main ul').html(htmlStr);
+            $('.inland ul').html(htmlStr);
         }
 
     })

@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>白菜价页面</title>
+    <title>优惠券页面</title>
     <!-- 引入样式 -->
     <link rel="stylesheet" href="./css/container.css" />
     <link rel="stylesheet" href="./lib/fa字体图标库/css/font-awesome.css" />
@@ -20,28 +20,19 @@
             <div class="back">
                 <a href="index.html" class="fa fa-angle-left"></a>
             </div>
-            <h1>白菜价-淘宝内部券</h1>
+            <h1>优惠券</h1>
             <!-- 下载logo -->
             <div class="down">
                 <a href="#"> <img src="./images/header_app.png" alt="" /> </a>
             </div>
         </div>
-        <!-- 主要内容区域 -->
-        <div class="bc_main">
-            <div class="title">
-                <div class="wrapper">
-                    <ul class="clearfix">
-                        <!-- 挖个坑 -->
-                    </ul>
-                </div>
-                <div class="icon"><i class="fa fa-reorder"></i></div>
-            </div>
-            <div class="list">
-                <ul>
-                    <!-- 挖个坑 -->
-                </ul>
-            </div>
+        <!-- 内容区域 -->
+        <div class="main">
+            <ul class="clearfix">
+                <!-- 挖个坑 -->
+            </ul>
         </div>
+
         <!-- 底部区域 -->
         <div class="m_footer">
             <div class="top">
@@ -59,42 +50,14 @@
             </div>
         </div>
     </div>
-    <script type="text/html" id="baicai">
+    <script type="text/html" id="cou">
         {{each result v i}}
-      <li><a href="javascript:;" class="{{i===0?'current':''}}" data-id={{v.titleId}}>{{v.title}}</a></li>
-      {{/each}}
-    </script>
-    <script type="text/html" id="baicai2">
-        {{each result v i}}
-      <li>
-          <a href="#">
-              <div class="pic">
-                  {{@v.productImg}}
-              </div>
-              <div class="info">
-                  <div class="i">
-                      <div class="t">
-                          {{@v.productName}}
-                      </div>
-                      <div class='pr'>
-                          {{@v.productPrice}}
-                      </div>
-                  </div>
-                  <div class="o">
-                      {{@v.productCouponRemain}}
-                      <div class="b">
-                          <div class="you">
-                              {{@v.productCoupon}}
-                          </div>
-                          <div class="link">
-                              {{@v.productHref}}
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </a>
-      </li>
-      {{/each}}
+        <li>
+            <a href="couponproduct.html?couponid={{v.couponId}}">
+                <img src="{{v.couponImg}}" alt="">
+            {{v.couponTitle}}</a>
+        </li>
+        {{/each}}
     </script>
     <!-- 引入rem布局插件 -->
     <script src="./lib/jquery/jquery.js"></script>
@@ -103,7 +66,7 @@
     <script src="./lib/template/template-web.js"></script>
     <script src="./js/common.js"></script>
     <!-- 引入自身的js -->
-    <script src="./js/baicai.js"></script>
+    <script src="./js/cou.js"></script>
     <!-- 引入区域滚动插件 -->
     <script src="./lib/区域滚动插件/iscroll.js"></script>
 </body>

@@ -1,0 +1,120 @@
+.gs_pro {
+  background-color: #f1f1f1;
+  .gs_hd {
+    height: 38rem / @base;
+    border-bottom: 1px solid #dadada;
+    background-color: #fff;
+    position: relative;
+    .search {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 46rem / @base;
+      height: 38rem / @base;
+      text-align: center;
+      line-height: 38rem / @base;
+      color: #808080;
+    }
+    .info {
+      height: 100%;
+      padding-right: 46rem / @base;
+      ul {
+        li {
+          float: left;
+          height: 38rem / @base;
+          width: 33.33%; // background-color: pink;
+          text-align: center;
+          line-height: 38rem / @base;
+          a {
+            display: block;
+            font-size: 16rem / @base;
+            i {
+              position: relative;
+              left: 2rem / @base;
+              top: 5rem / @base;
+              font-size: 16rem / @base;
+              color: #565656;
+            }
+          }
+        }
+      }
+    }
+    .list {
+      width: 100%;
+      position: absolute;
+      top: 38rem / @base;
+      background-color: #fff;
+      display: none;
+      li {
+        border-bottom: 1px solid #dadada;
+        height: 41rem / @base;
+        line-height: 41rem / @base;
+        list-style: none;
+        a {
+          display: block;
+          padding: 0 10rem / @base;
+          font-size: 16rem / @base;
+          i {
+            float: right;
+            position: relative;
+            top: 10rem / @base;
+            font-size: 20rem / @base;
+            color: #ff632b;
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .gs_list {
+    padding: 6rem / @base 0;
+    ul {
+      li {
+        float: left;
+        width: 50%;
+        a {
+          display: block;
+          margin: 4rem / @base;
+          background-color: #fff;
+          .pic {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            background-color: #fff;
+            img {
+              width: 174rem / @base;
+              height: 174rem / @base;
+              margin: 0 auto;
+            }
+          }
+          .title {
+            height: 14rem / @base;
+            font-size: 12rem / @base;
+            padding: 0 6rem / @base;
+            margin-top: 6rem / @base;
+            color: #333;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+          .other {
+            padding: 6rem / @base;
+            .spc {
+              color: #f8601d;
+              font-size: 20rem / @base;
+              float: left;
+            }
+            .btn {
+              float: right;
+              font-size: 14rem / @base;
+              color: #fff;
+              border-radius: 4rem / @base;
+              background-color: #ff9501;
+              padding: 4rem / @base 10rem / @base;
+            }
+          }
+        }
+      }
+    }
+  }
+}
