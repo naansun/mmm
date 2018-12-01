@@ -59,7 +59,11 @@
         <li>
             <a href="discount.html?productId={{v.productId}}">
                 <div class="img">
-                    {{@v.productImg}}
+                    <%
+                    var str = v.productImg;
+                    str = str.replace('src','data-original');
+                    %>
+                    {{@str}}
                 </div>
                 <div class="tit">{{v.productName}}</div>
                 <div class="mall">{{v.productPrice}}</div>
@@ -73,9 +77,13 @@
     </script>
     <!-- 引入rem布局插件 -->
     <script src="./lib/jquery/jquery.js"></script>
+    <!-- 图片懒加载插件 -->
+    <script src="./lib/lazy图片懒加载/jquery.lazyload.js"></script>
+    <!-- rem布局插件 -->
     <script src="./lib/flexible/flexible.js"></script>
     <!-- 模板引擎插件 -->
     <script src="./lib/template/template-web.js"></script>
+    <!-- 引入公共js  自定义 -->
     <script src="./js/common.js"></script>
     <!-- 引入自身的js -->
     <script src="./js/inland.js"></script>
