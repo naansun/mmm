@@ -19,11 +19,6 @@ $(function () {
                 var lis = $('.wrapper ul li');
                 // console.log(lis);
                 lis.each(function (i, v) {
-                    // console.log(i);
-                    // $(this).children().removeClass("current")
-                    // if (i == titleid) {
-                    //     $(this).children().addClass('current')
-                    // }
                     width += $(this).width();
                 })
                 // width = width;
@@ -34,17 +29,6 @@ $(function () {
                     scrollX: true,
                     scrollY: false
                 });
-
-                // 这种方法是通过传地址栏参数来进行整个页面刷新  然后渲染
-                // let $a = $('.wrapper ul li a')
-                // $a.each((i, v) => {
-                //     $(v).removeClass("current")
-                //     if (i == titleid) {
-                //         $(v).addClass('current')
-                //     }
-                // })
-                // $('.wrapper ul li a')
-                // $('.wrapper ul li a[data-id=titleid]').addClass('current')
             }
         })
     };
@@ -65,6 +49,11 @@ $(function () {
                 console.log(info);
                 var htmlStr2 = template('baicai2', info);
                 $('.list ul').html(htmlStr2);
+                $('.list ul li a .pic img').lazyload({
+                    placeholder: "./lazy/timg3.gif",
+                    threshold: 200,
+                    effect: "fadeIn"
+                });
             }
 
         })

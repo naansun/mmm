@@ -1,64 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>优惠券页面</title>
-    <!-- 引入样式 -->
-    <link rel="stylesheet" href="./css/container.css" />
-    <link rel="stylesheet" href="./lib/fa字体图标库/css/font-awesome.css" />
-    <link rel="stylesheet" href="./lib/swiper轮播图/css/swiper.css" />
-  </head>
 
-  <body>
-    <!-- 大容器 -->
-    <div class="m_container big">
-      <!-- 头部区域 -->
-      <div class="com header">
-        <!-- 首页导航区域 -->
-        <div class="back">
-          <a href="index.html" class="fa fa-angle-left"></a>
-        </div>
-        <h1>优惠券</h1>
-        <!-- 下载logo -->
-        <div class="down">
-          <a href="#"> <img src="./images/header_app.png" alt="" /> </a>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>优惠券页面</title>
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="./css/container.css" />
+  <link rel="stylesheet" href="./lib/fa字体图标库/css/font-awesome.css" />
+  <link rel="stylesheet" href="./lib/swiper轮播图/css/swiper.css" />
+</head>
+
+<body>
+  <!-- 大容器 -->
+  <div class="m_container big">
+    <!-- 头部区域 -->
+    <div class="com header">
+      <!-- 首页导航区域 -->
+      <div class="back">
+        <a href="index.html" class="fa fa-angle-left"></a>
       </div>
-      <!-- 内容区域 -->
-      <div class="product">
-        <div class="title">--点餐前出示手机中的优惠券，即可享受优惠--</div>
-        <div class="y_main">
-          <ul class="clearfix">
-            <!-- 挖个坑 -->
-          </ul>
-        </div>
-      </div>
-      <!-- 底部区域 -->
-      <div class="m_footer">
-        <div class="top">
-          <a href="">登录</a> <a href="" class="login">注册</a>
-          <a href="" style="width: 40%; border: 0;" id="return">
-            <img src="./images/top.jpg" alt="" /> <span>返回顶部</span>
-          </a>
-        </div>
-        <div class="bottom">
-          <p>
-            <a href="#" style="color:red">手机APP下载</a>
-            <a href="#">慢慢买手机版</a> -- 掌上比价平台
-          </p>
-          <p>m.manmanbuy.com</p>
-        </div>
+      <h1>优惠券</h1>
+      <!-- 下载logo -->
+      <div class="down">
+        <a href="#"> <img src="./images/header_app.png" alt="" /> </a>
       </div>
     </div>
-    <!-- 模态框 -->
-    <div class="motai"><!-- 挖个坑 --></div>
-    <script type="text/html" id="coup">
-      {{each result v i}}
+    <!-- 内容区域 -->
+    <div class="product">
+      <div class="title">--点餐前出示手机中的优惠券，即可享受优惠--</div>
+      <div class="y_main">
+        <ul class="clearfix">
+          <!-- 挖个坑 -->
+        </ul>
+      </div>
+    </div>
+    <!-- 底部区域 -->
+    <div class="m_footer">
+      <div class="top">
+        <a href="">登录</a> <a href="" class="login">注册</a>
+        <a href="" style="width: 40%; border: 0;" id="return">
+          <img src="./images/top.jpg" alt="" /> <span>返回顶部</span>
+        </a>
+      </div>
+      <div class="bottom">
+        <p>
+          <a href="#" style="color:red">手机APP下载</a>
+          <a href="#">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </div>
+  </div>
+  <!-- 模态框 -->
+  <div class="motai">
+    <!-- 挖个坑 -->
+  </div>
+  <script type="text/html" id="coup">
+    {{each result v i}}
       <li>
           <a href="javascript:;" title="">
               <div class="pic">
@@ -73,12 +73,12 @@
               </div>
               <div class="icon fa fa-angle-right"></div>
           </a>
-      </li>
+        </li>
       {{/each}}
     </script>
 
-    <script type="text/html" id="lun">
-        <!-- 轮播图主体 -->
+  <script type="text/html" id="lun">
+    <!-- 轮播图主体 -->
         <div class="swiper-container lun">
             <div class="swiper-wrapper">
                 {{each res v i}}
@@ -92,17 +92,18 @@
             <div class="swiper-button-next"></div>
       </div>
     </script>
-    <!-- 引入rem布局插件 -->
-    <script src="./lib/jquery/jquery.js"></script>
-    <script src="./lib/flexible/flexible.js"></script>
-    <!-- 模板引擎插件 -->
-    <script src="./lib/template/template-web.js"></script>
-    <script src="./js/common.js"></script>
-    <!-- 引入自身的js -->
-    <script src="./js/coup.js"></script>
-    <!-- 引入区域滚动插件 -->
-    <script src="./lib/区域滚动插件/iscroll.js"></script>
-    <!-- 引入轮播图插件 -->
-    <script src="./lib/swiper轮播图/js/swiper.min.js"></script>
-  </body>
+  <!-- 引入rem布局插件 -->
+  <script src="./lib/jquery/jquery.js"></script>
+  <script src="./lib/flexible/flexible.js"></script>
+  <!-- 模板引擎插件 -->
+  <script src="./lib/template/template-web.js"></script>
+  <script src="./js/common.js"></script>
+  <!-- 引入自身的js -->
+  <script src="./js/coup.js"></script>
+  <!-- 引入区域滚动插件 -->
+  <script src="./lib/区域滚动插件/iscroll.js"></script>
+  <!-- 引入轮播图插件 -->
+  <script src="./lib/swiper轮播图/js/swiper.min.js"></script>
+</body>
+
 </html>

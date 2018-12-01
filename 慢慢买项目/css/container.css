@@ -770,14 +770,14 @@ th {
   width: 4.66666667rem;
   height: 4.66666667rem;
 }
-.main .content .content .area span.s {
+.main .content .content .area span#s {
   position: relative;
   display: inline-block;
   line-height: 0.50666667rem;
   line-height: 0.26666667rem;
   padding: 0px 0.26666667rem 0px 0.21333333rem;
 }
-.main .content .content .area span.s .drop {
+.main .content .content .area span#s #drop {
   margin-left: 3.53333333rem;
   background-color: #fff;
   width: 1.84rem;
@@ -787,23 +787,24 @@ th {
   border-style: solid;
   padding: 0px 0px 0.13333333rem 0px;
 }
-.main .content .content .area span.s .drop ul li {
+.main .content .content .area span#s #drop ul li {
   width: 100%;
+  height: auto;
   font-size: 0.16rem;
   line-height: 0.26666667rem;
   font-family: "Microsoft Yahei";
 }
-.main .content .content .area span.s .drop ul li a {
+.main .content .content .area span#s #drop ul li a {
   display: block;
   padding: 0 0.13333333rem;
 }
-.main .content .content .area span.s .drop ul li a span {
+.main .content .content .area span#s #drop ul li a span {
   border-bottom: 1px dotted #d0d0d0;
   padding: 0 0.13333333rem;
   text-align: left;
   display: block;
 }
-.main .content .content .area span.s .drop ul li a span strong {
+.main .content .content .area span#s #drop ul li a span strong {
   float: right;
   font-weight: normal;
   color: #f27b04;
@@ -1387,6 +1388,13 @@ body {
   height: 1.06666667rem;
   margin-top: -0.42666667rem;
   border-radius: 0.13333333rem;
+}
+.motai .lun span {
+  position: absolute;
+  color: #007aff;
+  right: 0.33333333rem;
+  font-size: 0.4rem;
+  top: 0;
 }
 .gs_pro {
   background-color: #f1f1f1;

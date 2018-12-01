@@ -68,8 +68,12 @@
         {{each result v i}}
       <li>
           <a href="#">
+              <%
+              var str = v.productImg;
+              str = str.replace('src','data-original');
+              %>
               <div class="pic">
-                  {{@v.productImg}}
+                  {{@str}}
               </div>
               <div class="info">
                   <div class="i">
@@ -98,6 +102,8 @@
     </script>
     <!-- 引入rem布局插件 -->
     <script src="./lib/jquery/jquery.js"></script>
+    <!-- 引入图片懒加载 -->
+    <script src="./lib/lazy图片懒加载/jquery.lazyload.js"></script>
     <script src="./lib/flexible/flexible.js"></script>
     <!-- 模板引擎插件 -->
     <script src="./lib/template/template-web.js"></script>
